@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVault — Cadastro de Jogos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ TELA DE LOGIN ░░ -->
+  <section id="tela-login">
+    <div class="login-card">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="login-card__inner">
+        <div class="login-logo">
+          <span class="logo-icon">▶</span>
+          <h1 class="logo-title">GameVault</h1>
+        </div>
+        <p class="login-subtitle">Faça login para acessar sua coleção</p>
+
+        <div class="form-group">
+          <label for="input-usuario">Usuário</label>
+          <input type="text" id="input-usuario" placeholder="seu usuário" autocomplete="username" />
+        </div>
+
+        <div class="form-group">
+          <label for="input-senha">Senha</label>
+          <input type="password" id="input-senha" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+
+        <p id="erro-login" class="mensagem-erro" aria-live="polite"></p>
+
+        <button id="btn-login" class="btn btn--primary btn--full">Entrar</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="tela-lista" class="hidden">
+    <header class="app-header">
+      <div class="header-brand">
+        <span class="logo-icon">▶</span>
+        <span class="logo-title">GameVault</span>
+      </div>
+      <button id="btn-logout" class="btn btn--ghost">Sair</button>
+    </header>
+
+    <main class="app-main">
+      <div class="add-panel">
+        <h2 class="section-title">Adicionar jogo</h2>
+
+        <div class="input-row">
+          <input type="text" id="input-jogo" placeholder="Nome do jogo..." />
+          <button id="btn-add-fim" class="btn btn--primary">+ No fim</button>
+          <button id="btn-add-inicio" class="btn btn--secondary">+ No início</button>
+        </div>
+        <p id="erro-jogo" class="mensagem-erro" aria-live="polite"></p>
+      </div>
+
+      <div class="list-panel">
+        <h2 class="section-title">
+          Minha coleção
+          <span id="contador" class="badge">0</span>
+        </h2>
+        <ul id="lista-jogos"></ul>
+      </div>
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

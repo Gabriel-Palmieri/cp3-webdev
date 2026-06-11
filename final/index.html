@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVault — Cadastro de Jogos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <section id="tela-login">
+    <div class="login-card">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="login-card__inner">
+        <div class="login-logo">
+          <span class="logo-icon">▶</span>
+          <h1 class="logo-title">GameVault</h1>
+        </div>
+        <p class="login-subtitle">Faça login para acessar sua coleção</p>
+
+        <form id="form-login">
+          <div class="form-group">
+            <label for="input-usuario">Usuário</label>
+            <input type="text" id="input-usuario" placeholder="seu usuário" autocomplete="username" />
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="input-senha">Senha</label>
+            <input type="password" id="input-senha" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+
+          <p id="erro-login" class="mensagem-erro" aria-live="polite" style="margin-top:.6rem;"></p>
+
+          <button type="submit" class="btn btn--primary btn--full" style="margin-top:.4rem;">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="tela-lista" class="hidden">
+    <header class="app-header">
+      <div class="header-brand">
+        <span class="logo-icon">▶</span>
+        <span class="logo-title">GameVault</span>
+      </div>
+      <button id="btn-logout" class="btn btn--ghost">Sair</button>
+    </header>
+
+    <main class="app-main">
+      <div class="add-panel">
+        <h2 class="section-title">Adicionar jogo</h2>
+
+        <form id="form-jogo">
+          <div class="input-row">
+          <input type="text" id="input-jogo" placeholder="Nome do jogo..." />
+          <button id="btn-add-fim" type="button" class="btn btn--primary">+ No fim</button>
+          <button id="btn-add-inicio" type="button" class="btn btn--secondary">+ No início</button>
+        </div>
+        <p id="erro-jogo" class="mensagem-erro" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="list-panel">
+        <h2 class="section-title">
+          Minha coleção
+          <span id="contador" class="badge">0</span>
+        </h2>
+        <ul id="lista-jogos"></ul>
+      </div>
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

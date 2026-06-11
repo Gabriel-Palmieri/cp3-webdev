@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Jogos Favoritos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="login-screen" class="panel login-panel">
+      <div class="panel-header">
+        <p class="eyebrow">Sistema de cadastro</p>
+        <h1>Jogos favoritos</h1>
+      </div>
+
+      <form id="login-form" novalidate>
+        <label for="username">Usuario</label>
+        <input id="username" type="text" autocomplete="username" placeholder="Digite seu usuario">
+
+        <label for="password">Senha</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Digite sua senha">
+
+        <p id="login-message" class="message error" aria-live="polite"></p>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="games-screen" class="panel games-panel hidden">
+      <div class="topbar">
+        <div>
+          <p class="eyebrow">Area logada</p>
+          <h1>Cadastro de jogos favoritos</h1>
+        </div>
+        <button id="logout-button" class="secondary-button" type="button">Sair</button>
+      </div>
+
+      <form id="game-form" class="game-form" novalidate>
+        <label for="game-input">Nome do jogo</label>
+        <div class="input-actions">
+          <input id="game-input" type="text" placeholder="Ex: Chrono Trigger">
+          <button id="add-end-button" type="button">Adicionar no fim</button>
+          <button id="add-start-button" class="secondary-button" type="button">Adicionar no inicio</button>
+        </div>
+        <p id="game-message" class="message error" aria-live="polite"></p>
+      </form>
+
+      <div class="list-header">
+        <h2>Lista de jogos</h2>
+        <span id="game-count">0 jogos</span>
+      </div>
+
+      <ul id="games-list" class="games-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

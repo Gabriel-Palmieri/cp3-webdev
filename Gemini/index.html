@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Jogos Favoritos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main id="login-section" class="container">
+        <h2>Acesso ao Sistema</h2>
+        <div class="input-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu usuário">
+        </div>
+        <div class="input-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+        <div id="login-error" class="error-message hidden"></div>
+        <button id="btn-login" class="primary-btn">Entrar</button>
+    </main>
+
+    <main id="app-section" class="container hidden">
+        <h2>Meus Jogos Favoritos</h2>
+        
+        <div class="crud-controls">
+            <input type="text" id="new-game" placeholder="Nome do novo jogo">
+            <div class="action-buttons">
+                <button id="btn-add-start" class="secondary-btn">Adicionar no Início</button>
+                <button id="btn-add-end" class="primary-btn">Adicionar no Fim</button>
+            </div>
+        </div>
+        <div id="app-error" class="error-message hidden"></div>
+
+        <ul id="game-list">
+            </ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
